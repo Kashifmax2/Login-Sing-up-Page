@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-box" id="loginForm">
+            <h2>Login</h2>
+            <form id="loginAction">
+                <input type="email" id="lEmail" placeholder="Email Address" required>
+                <input type="password" id="lPass" placeholder="Password" required>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p>Don't have an account? <a href="javascript:void(0)" onclick="toggleForm()">Signup</a></p>
+            <button type="button" class="btn" id="checkDetailBtn" style="background: #28a745;">Check Detail</button>
+        </div>
+
+        <div class="form-box" id="signupForm" style="display: none;">
+            <h2>Signup</h2>
+            <form id="signupAction">
+                <input type="text" id="sName" placeholder="Full Name" required>
+                <input type="email" id="sEmail" placeholder="Email Address" required>
+                <input type="password" id="sPass" placeholder="Create Password" required>
+                <button type="submit" class="btn">Create Account</button>
+            </form>
+            <p>Already have an account? <a href="javascript:void(0)" onclick="toggleForm()">Login</a></p>
+        </div>
+    </div>
+
+    
+</body>
+<script src="app.js"></script>
+</html>
